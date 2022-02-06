@@ -35,3 +35,7 @@
 
 ### VS Code ###
 !**/.vscode/
+
+starterProject/build/
+starterProject/.gradle/
+starterProject/.idea/
