@@ -1,0 +1,16 @@
+server:
+  port: 9901
+
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://localhost:9900
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
