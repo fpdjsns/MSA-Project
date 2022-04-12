@@ -9,3 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/fpdjsns/MSA-config-files.git
+#    bus:
+#      destination: springCloudBus
+  kafka:
+    bootstrap-servers: {{your.host.name}}:9092

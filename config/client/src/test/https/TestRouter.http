@@ -1,6 +1,10 @@
 ###
 GET http://localhost:9901/test
-Content-Type: application/json
+#GET http://localhost:9902/test
 
 ### refresh
 POST http://localhost:9901/actuator/refresh
+#POST http://localhost:9902/actuator/refresh
+
+### busrefresh
+POST http://localhost:9901/actuator/busrefresh

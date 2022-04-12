@@ -1,5 +1,6 @@
 server:
   port: 9901
+#  port: 9902
 
 spring:
   application:
@@ -8,9 +9,13 @@ spring:
     active: dev
   config:
     import: optional:configserver:http://localhost:9900
+#    bus:
+#      destination: springCloudBus
+  kafka:
+    bootstrap-servers: {{your.host.name}}:9092
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: refresh, busrefresh
