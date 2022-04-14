@@ -1,6 +1,8 @@
 ###
 GET http://localhost:9901/test
-#GET http://localhost:9902/test
+
+###
+GET http://localhost:9902/test
 
 ### refresh
 POST http://localhost:9901/actuator/refresh

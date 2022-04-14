@@ -27,6 +27,12 @@ $ docker-compose stop
 $ docker exec -it local-kafka /bin/sh
 ```
 
+- 로그 확인
+```shell
+$ cd /kafka/logs/{topicname-partition}
+$ tail -f {file name}.log
+```
+
 ### [참고] topic
 
 - 생성

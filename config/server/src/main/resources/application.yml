@@ -11,5 +11,15 @@ spring:
           uri: https://github.com/fpdjsns/MSA-config-files.git
 #    bus:
 #      destination: springCloudBus
+      monitor:
+        endpoint:
+          path: /actuator
   kafka:
     bootstrap-servers: {{your.host.name}}:9092
+
+logging:
+  level:
+    root: INFO
+    org:
+      apache:
+        kafka: INFO

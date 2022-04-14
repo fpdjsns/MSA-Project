@@ -18,5 +18,6 @@ services:
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_CREATE_TOPICS: "springCloudBus:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LOG_DIRS: "/kafka/logs"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

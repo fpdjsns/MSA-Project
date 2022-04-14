@@ -1,2 +1,12 @@
 ###
 GET http://localhost:9900/config-client/dev
+
+###
+POST http://localhost:9900/actuator/monitor
+Content-Type: application/json
+
+{
+  "path": [
+    "**"
+  ]
+}
