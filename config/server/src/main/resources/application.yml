@@ -1,9 +1,11 @@
 server:
-  port: 9900
+  port: 8888
 
 spring:
   application:
     name: config-server
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     config:
       server:
@@ -12,8 +14,8 @@ spring:
 #    bus:
 #      destination: springCloudBus
       monitor:
-        endpoint:
-          path: /actuator
+#        custom:
+#          profiles: dev, alpha, real, beta
   kafka:
     bootstrap-servers: {{your.host.name}}:9092
 

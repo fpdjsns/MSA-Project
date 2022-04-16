@@ -3,4 +3,5 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-config-server")
     implementation("org.springframework.cloud:spring-cloud-starter-bus-kafka")
     implementation("org.springframework.cloud:spring-cloud-config-monitor")
+    implementation("org.springframework.cloud:spring-cloud-starter-stream-kafka")
 }

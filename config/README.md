@@ -30,6 +30,23 @@ $ ./kafka/docker-compose
 Cloud Config Server Application  
 config-files github url : https://github.com/fpdjsns/MSA-config-files.git
 
+- **github webhook** 등록
+1. \[개인 도메인이 존재하지 않는 경우] ngrok 사용  
+  [ngrok](https://dashboard.ngrok.com/get-started/setup) 설치 & 회원가입
+```shell
+ngrok http 8888
+```
+  config server 포트인 8888 포트 포워딩 도메인 주소 get  
+
+2. github webhook event 등록  
+   config-files github 웹훅 추가  
+   | 항목 | 내용 |   
+   | --- | --- |   
+   | payload URL | {{config-server 도메인주소}}/monitor |  
+   | Content-type | application-json |
+   | Secret |  |
+   | trigger | Just the push event. |
+   
 ### Client 모듈
 
 Config-Server 모듈을 테스트하는 Client Server  

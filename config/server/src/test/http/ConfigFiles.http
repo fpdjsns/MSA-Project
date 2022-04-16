@@ -1,12 +1,34 @@
 ###
-GET http://localhost:9900/config-client/dev
+GET http://localhost:8888/config-client/dev
 
 ###
-POST http://localhost:9900/actuator/monitor
+POST http://localhost:8888/monitor
 Content-Type: application/json
 
 {
   "path": [
     "**"
   ]
+}
+
+### github webhook test (when changed config-client-dev.yml)
+POST http://localhost:8888/monitor
+Accept: */*
+content-type: application/json
+X-GitHub-Event: push
+X-GitHub-Hook-Installation-Target-Type: repository
+
+{
+  "commits": [
+    {
+      "modified": [
+        "config-client-dev.yml"
+      ]
+    }
+  ],
+  "head_commit": {
+    "modified": [
+      "config-client-dev.yml"
+    ]
+  }
 }

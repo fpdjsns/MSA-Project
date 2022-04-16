@@ -1,6 +1,6 @@
 server:
-  port: 9901
-#  port: 9902
+#  port: 9901
+  port: 9902
 
 spring:
   application:
@@ -8,7 +8,7 @@ spring:
   profiles:
     active: dev
   config:
-    import: optional:configserver:http://localhost:9900
+    import: optional:configserver:http://localhost:8888
 #    bus:
 #      destination: springCloudBus
   kafka:
