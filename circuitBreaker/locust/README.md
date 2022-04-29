@@ -10,7 +10,7 @@ mac
 $ ifconfig | grep inet
 ```
 
-2. locust/locustfile.py 파일의 {{ ip }} 를 로컬 IP로 수정
+2. locustfile.py 파일의 {{ ip }} 를 로컬 IP로 수정
 3. locust 폴더로 이동 후 
    ```shell
    docker-compose up
