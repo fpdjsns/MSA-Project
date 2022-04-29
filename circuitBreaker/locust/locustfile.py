@@ -3,8 +3,6 @@ from locust import HttpUser, task, between
 
 class QuickstartUser(HttpUser):
     wait_time = between(1, 5)
-    network_timeout = 1.0
-    connection_timeout = 1.0
     host = "{{ ip }}:8080"
 
     @task
