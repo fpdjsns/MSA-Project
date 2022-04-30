@@ -1,3 +1,3 @@
 rootProject.name = "circuit-breaker"
 
-include("service")
+include("circuit", "service")
